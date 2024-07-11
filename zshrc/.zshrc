@@ -111,7 +111,7 @@ export NVM_DIR="$HOME/.nvm"
 
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 
-path+=("/root/.local/script")
+path+=("/home/joe/.local/script")
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
@@ -122,7 +122,7 @@ export EDITOR='nvim'
 
 alias development='cd /mnt/d'
 alias bat='~/.local/bin/bat'
-alias clip=clip.exe
+alias clip='xsel -ib'
 alias jo='/snap/bin/jo'
 alias python='/usr/bin/python3'
 alias fsb='~/.local/script/fsb.sh'
