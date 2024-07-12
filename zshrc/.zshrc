@@ -111,7 +111,7 @@ export NVM_DIR="$HOME/.nvm"
 
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 
-path+=("/home/joe/.local/script")
+export PATH="$PATH:$HOME/.local/script"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
