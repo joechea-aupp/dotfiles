@@ -35,9 +35,8 @@ eval "$(tmuxifier init -)"
 
 export EDITOR='nvim'
 
-alias development='cd /mnt/d'
 alias bat='~/.local/bin/bat'
-alias clip='xsel -ib'
+# alias clip='xsel -ib'
 alias jo='/snap/bin/jo'
 alias python='/usr/bin/python3'
 alias fsb='~/.local/script/fsb.sh'
@@ -46,6 +45,8 @@ alias gs='git status'
 alias gd='git diff'
 alias sgh='gh repo list | awk '\''{print $1}'\'' | fzf | xargs -p gh repo clone'
 alias pgh='pwd | awk -F/ '\''{print $NF}'\'' | xargs -p -I {} gh repo create --public {} --source . --push'
+alias explorer='/mnt/c/Windows/explorer.exe .'
+alias clip='/mnt/c/Windows/System32/clip.exe'
 
 # Show Vi mode indicator
 function zle-line-init zle-keymap-select {
