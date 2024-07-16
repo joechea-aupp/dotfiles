@@ -47,8 +47,9 @@ alias sgh='gh repo list | awk '\''{print $1}'\'' | fzf | xargs -p gh repo clone'
 alias pgh='pwd | awk -F/ '\''{print $NF}'\'' | xargs -p -I {} gh repo create --public {} --source . --push'
 alias explorer='/mnt/c/Windows/explorer.exe .'
 alias clip='/mnt/c/Windows/System32/clip.exe'
+alias pg='passgen.sh'
 
-# Show Vi mode indicator
+# Show Vi mod indicator
 function zle-line-init zle-keymap-select {
   case $KEYMAP in
     vicmd) printf "\033[1 q" ;;  # Normal mode cursor (block)
