@@ -3,10 +3,10 @@
   "app_specific_configuration_path": "$Env:USERPROFILE/applications.yaml",
   "window_hiding_behaviour": "Cloak",
   "cross_monitor_move_behaviour": "Insert",
-  "default_workspace_padding": 5,
-  "default_container_padding": 5,
+  "default_workspace_padding": 2,
+  "default_container_padding": 1,
   "border": true,
-  "border_width": 2,
+  "border_width": 5,
   "border_offset": -1,
   "border_colours": {
     "single": "#42a5f5",
@@ -33,15 +33,33 @@
         },
         {
           "name": "II",
-          "layout": "VerticalStack"
+          "layout": "VerticalStack",
+          "initial_workspace_rules": [
+            {
+              "kind":"Exe",
+              "id":"msedge.exe"
+            }
+          ]
         },
         {
           "name": "III",
-          "layout": "HorizontalStack"
+          "layout": "HorizontalStack",
+          "initial_workspace_rules": [
+            {
+              "kind":"Exe",
+              "id": "alacritty.exe"
+            }
+          ]
         },
         {
           "name": "IV",
-          "layout": "UltrawideVerticalStack"
+          "layout": "UltrawideVerticalStack",
+          "initial_workspace_rules": [
+            {
+              "kind":"Exe",
+              "id": "Telegram.exe"
+            }
+          ]
         },
         {
           "name": "V",
