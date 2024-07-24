@@ -49,7 +49,7 @@ bar:
   opacity: 1.0
   background: "#20242cc4"
   foreground: "#ffffff"
-  font_family: "Segoe UI"
+  font_family: "CaskaydiaCove Nerd Font"
   font_size: "13px"
   padding: "4px 6px"
   offset_x: "0"
@@ -78,10 +78,10 @@ bar:
       # Documentation on formatting date/time string:
       # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
       time_formatting: "hh:mm tt  ddd MMM d "
-    - type: "battery"
-      label_draining: "{battery_level}% juice"
-      label_power_saver: "{battery_level}% (power saver)"
-      label_charging: "{battery_level}% (charging)"
+    # - type: "battery"
+    #   label_draining: "{battery_level}% juice"
+    #   label_power_saver: "{battery_level}% (power saver)"
+    #   label_charging: "{battery_level}% (charging)"
     - type: "tiling direction"
       label_horizontal: "⮂"
       label_vertical: "⮁"
@@ -104,7 +104,7 @@ window_rules:
   # Task Manager requires admin privileges to manage and should be ignored unless running
   # the WM as admin.
   - command: "ignore"
-    match_process_name: "Taskmgr|ScreenClippingHost|PowerToys.PowerLauncher"
+    match_process_name: "Taskmgr|ScreenClippingHost|PowerToys.PowerLauncher|TablePlus|Obsidian"
 
   # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
   - command: "set floating"
