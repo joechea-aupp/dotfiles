@@ -2,8 +2,8 @@ import = [
 	# "~\\AppData\\Roaming\\alacritty\\themes\\github-dark-tritanopia.toml",
 		# "~\\AppData\\Roaming\\alacritty\\themes\\baitong.toml",
 	# "~\\AppData\\Roaming\\alacritty\\themes\\catppuccin-macchiato.toml",
-		"~\\AppData\\Roaming\\alacritty\\themes\\nightfly.toml",
-	# "~\\AppData\\Roaming\\alacritty\\themes\\cyberdream.toml",
+		# "~\\AppData\\Roaming\\alacritty\\themes\\nightfly.toml",
+	"~\\AppData\\Roaming\\alacritty\\themes\\cyberdream.toml",
 ]
 
 [window]
