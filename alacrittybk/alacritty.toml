@@ -1,0 +1,32 @@
+import = [
+	# "~\\AppData\\Roaming\\alacritty\\themes\\github-dark-tritanopia.toml",
+		# "~\\AppData\\Roaming\\alacritty\\themes\\baitong.toml",
+	# "~\\AppData\\Roaming\\alacritty\\themes\\catppuccin-macchiato.toml",
+		"~\\AppData\\Roaming\\alacritty\\themes\\nightfly.toml",
+	# "~\\AppData\\Roaming\\alacritty\\themes\\cyberdream.toml",
+]
+
+[window]
+
+opacity = 0.9
+padding.x = 7
+padding.y = 7
+
+decorations = "Full"
+decorations_theme_variant = "Dark"
+
+[font]
+
+normal.family = "CaskaydiaCove Nerd Font"
+bold.family = "CaskaydiaCove Nerd Font"
+italic.family = "CaskaydiaCove Nerd Font"
+bold_italic.family = "CaskaydiaCove Nerd Font"
+offset = {x = 0, y = 5}
+
+size = 12
+
+[shell]
+
+args = ["--cd ~"]
+program = 'C:\Windows\System32\wsl.exe'
+
