@@ -821,25 +821,37 @@ require('lazy').setup {
     -- change the command in the config to whatever the name of that colorscheme is
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`
-    'folke/tokyonight.nvim',
+    -- 'folke/tokyonight.nvim',
     -- 'projekt0n/github-nvim-theme',
     -- 'nanotech/jellybeans.vim',
     -- 'aktersnurra/no-clown-fiesta.nvim',
+    'scottmckendry/cyberdream.nvim',
     lazy = false, -- make sure we load this during startup if it is your main colorscheme
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
       -- Load the colorscheme here
       -- add theme configuration for tokyonight
-      require('tokyonight').setup {
-        style = 'storm',
+      -- require('tokyonight').setup {
+      --   style = 'storm',
+      --   transparent = true,
+      --   terminal_colors = true,
+      --   styles = {
+      --     sidebars = 'dark',
+      --     floats = 'dark',
+      --   },
+      -- }
+      require('cyberdream').setup {
         transparent = true,
         terminal_colors = true,
-        styles = {
-          sidebars = 'dark',
-          floats = 'dark',
+        italic_comments = true,
+        hide_fillchars = false,
+        borderless_telescope = true,
+        extensions = {
+          telescope = true,
         },
       }
-      vim.cmd.colorscheme 'tokyonight-night'
+      -- vim.cmd.colorscheme 'tokyonight-night'
+      vim.cmd.colorscheme 'cyberdream'
       -- vim.cmd.colorscheme 'github_dark_default'
       -- vim.cmd.colorscheme 'no-clown-fiesta'
       -- vim.cmd.colorscheme 'jellybeans'
