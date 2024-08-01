@@ -9,11 +9,14 @@ import = [
 [window]
 
 opacity = 0.9
-padding.x = 5
-# padding.y = 7
+
+padding = { x = 3, y = 0 }
+dynamic_padding = true
 
 decorations = "Full"
 decorations_theme_variant = "Dark"
+
+startup_mode = "Maximized"
 
 [font]
 
@@ -21,7 +24,7 @@ normal.family = "CaskaydiaCove Nerd Font"
 bold.family = "CaskaydiaCove Nerd Font"
 italic.family = "CaskaydiaCove Nerd Font"
 bold_italic.family = "CaskaydiaCove Nerd Font"
-# offset = {x = 0, y = 5}
+offset = {x = 0, y = 5}
 
 size = 12
 
