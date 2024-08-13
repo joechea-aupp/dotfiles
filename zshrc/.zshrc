@@ -30,6 +30,7 @@ export PATH="$PATH:$HOME/.local/script"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:$(go env GOPATH)/bin"
 
 eval "$(tmuxifier init -)"
 

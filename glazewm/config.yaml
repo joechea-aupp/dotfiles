@@ -206,8 +206,8 @@ keybindings:
 
   # Launch CMD terminal (alternatively `exec wt` or `exec %ProgramFiles%/Git/git-bash.exe`
   # to start Windows Terminal and Git Bash respectively.
-  - command: "exec alacritty"
-    binding: "Alt+Enter"
+  # - command: "exec alacritty"
+  #   binding: "Alt+Enter"
 
   - command: "exec 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe'"
     binding: "Alt+B"
