@@ -490,6 +490,7 @@ require('lazy').setup {
       -- 'rafamadriz/friendly-snippets',
     },
     config = function()
+      require 'snippets.lua_snippets'
       -- See `:help cmp`
       local cmp = require 'cmp'
       local luasnip = require 'luasnip'
