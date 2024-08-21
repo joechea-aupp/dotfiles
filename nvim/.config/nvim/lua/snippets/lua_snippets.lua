@@ -6,7 +6,7 @@ local i = ls.insert_node
 ls.add_snippets('go', {
   s('print', {
     t 'fmt.Println("',
-    i(1, 'Hello, World!'),
+    i(1, 'Hello, Go!'),
     t '")',
   }),
   s('printf', {
@@ -15,6 +15,20 @@ ls.add_snippets('go', {
     t '", %',
     i(2),
     t ')',
+  }),
+  s('htroute', {
+    t 'func (',
+    i(1),
+    t ') ',
+    i(2),
+    t '(w http.ResponseWriter, r *http.Request) {',
+    i(0),
+    t '}',
+  }),
+  s('htmx', {
+    t 'fmt.Sprintf(`',
+    i(1),
+    t '`)',
   }),
 })
 
