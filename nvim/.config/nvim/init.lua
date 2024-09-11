@@ -342,7 +342,8 @@ require('lazy').setup {
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         -- clangd = {},
-        -- gopls = {},
+        gopls = {},
+        templ = {},
         -- pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -451,7 +452,7 @@ require('lazy').setup {
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
         javascript = { 'prettierd', 'prettier' },
-        html = { 'prettierd', 'prettier' },
+        html = { 'templ', 'prettier', 'prettierd' },
         vue = { 'prettierd', 'prettier' },
         blade = { 'tlint' },
         go = { 'gofmt', 'gofumpt' },
