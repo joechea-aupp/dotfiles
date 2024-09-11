@@ -2,7 +2,7 @@ return {
   'folke/tokyonight.nvim',
   lazy = false,
   priority = 1000,
-  cond = false,
+  cond = nil,
   config = function()
     require('tokyonight').setup {
       style = 'storm',
@@ -12,5 +12,6 @@ return {
         floats = 'dark',
       },
     }
+    vim.cmd [[colorscheme tokyonight]]
   end,
 }

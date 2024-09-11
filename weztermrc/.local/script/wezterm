@@ -1,0 +1,20 @@
+#!/bin/bash
+
+userPath=$(wslpath "$(wslvar USERPROFILE)")
+
+case "$1" in
+	reload)
+		cp -r ~/dotfiles/wezterm/.wezterm.lua  $userPath/
+		if [ $? ]; then
+			echo "reload completed..."
+			exit 0
+		fi
+		echo "failed to reload..."
+		exit 1
+		;;
+
+	*)
+		exit 0
+		;;
+esac
+

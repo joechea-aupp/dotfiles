@@ -4,11 +4,12 @@ import = [
 	# "~\\AppData\\Roaming\\alacritty\\themes\\catppuccin-macchiato.toml",
 		# "~\\AppData\\Roaming\\alacritty\\themes\\nightfly.toml",
 	# "~\\AppData\\Roaming\\alacritty\\themes\\cyberdream.toml",
+	# "~\\AppData\\Roaming\\alacritty\\themes\\tokyo-night.toml",
 ]
 
 [window]
 
-opacity = 0.9
+opacity = 0.95
 
 padding = { x = 3, y = 0 }
 dynamic_padding = true
