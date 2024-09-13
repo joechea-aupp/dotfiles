@@ -16,7 +16,7 @@ config.window_padding = {
 config.color_scheme = "GitHub Dark"
 config.default_domain = "WSL:Ubuntu"
 config.font = wezterm.font("CaskaydiaCove Nerd Font")
-config.font_size = 12.0
-config.cell_width = 1
-config.line_height = 1.1
+config.font_size = 11
+-- config.cell_width = 1
+-- config.line_height = 1.1
 return config
