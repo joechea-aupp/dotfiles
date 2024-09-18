@@ -4,7 +4,7 @@ local config = wezterm.config_builder()
 config.enable_tab_bar = false
 config.tab_max_width = 36
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.9
+-- config.window_background_opacity = 0.9
 
 config.window_padding = {
 	left = 10,
