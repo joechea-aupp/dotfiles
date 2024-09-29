@@ -28,11 +28,9 @@ export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 
 export PATH="$PATH:$HOME/.local/script"
 export PATH="$PATH:/opt/nvim-linux64/bin"
-export PATH="$HOME/.tmuxifier/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:$(go env GOPATH)/bin"
-
-eval "$(tmuxifier init -)"
+export PATH=$PATH:/snap/bin
 
 export EDITOR='nvim'
 
