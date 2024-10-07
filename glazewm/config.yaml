@@ -209,7 +209,7 @@ keybindings:
   # - command: "exec alacritty"
   #   binding: "Alt+Enter"
 
-  - command: "exec 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe'"
+  - command: "exec 'C:\\Users\\Joe\\AppData\\Local\\Vivaldi\\Application\\vivaldi.exe'"
     binding: "Alt+B"
 
   # Focus the workspace that last had focus.
