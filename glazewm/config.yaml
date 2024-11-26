@@ -206,10 +206,10 @@ keybindings:
 
   # Launch CMD terminal (alternatively `exec wt` or `exec %ProgramFiles%/Git/git-bash.exe`
   # to start Windows Terminal and Git Bash respectively.
-  # - command: "exec alacritty"
-  #   binding: "Alt+Enter"
+  - command: "exec ubuntu.exe"
+    binding: "Alt+Enter"
 
-  - command: "exec 'C:\\Users\\Joe\\AppData\\Local\\Vivaldi\\Application\\vivaldi.exe'"
+  - command: "exec 'C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe'"
     binding: "Alt+B"
 
   # Focus the workspace that last had focus.
