@@ -4,7 +4,7 @@ userPath=$(wslpath "$(wslvar USERPROFILE)")
 
 case "$1" in
 	reload)
-		cp ~/dotfiles/glazewm/config.yaml $userPath/.glaze-wm/config.yaml
+		cp ~/dotfiles/glazewm/config.yaml $userPath/.glzr/glazewm/config.yaml
 		if [ $? ]; then
 			echo "reload completed..."
 			exit 0
