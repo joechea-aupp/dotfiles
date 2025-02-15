@@ -456,7 +456,7 @@ require('lazy').setup {
         javascript = { 'prettierd', 'prettier' },
         html = { 'templ', 'prettier', 'prettierd' },
         vue = { 'prettierd', 'prettier' },
-        blade = { 'tlint' },
+        blade = { 'prettierd', 'prettier' },
         go = { 'gofmt', 'gofumpt' },
       },
     },
@@ -616,6 +616,8 @@ require('lazy').setup {
           enable = true,
         },
       }
+
+      vim.treesitter.language.register('php', 'blade')
 
       -- There are additional nvim-treesitter modules that you can use to interact
       -- with nvim-treesitter. You should go explore a few and see what interests you:

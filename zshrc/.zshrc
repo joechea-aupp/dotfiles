@@ -14,6 +14,7 @@ ZSH_THEME="robbyrussell"
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+userPath=$(wslpath $(wslvar USERPROFILE))
 
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting vi-mode)
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
@@ -27,6 +28,7 @@ export NVM_DIR="$HOME/.nvm"
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 
 export PATH="$PATH:$HOME/.local/script"
+export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:$(go env GOPATH)/bin"
@@ -34,20 +36,25 @@ export PATH=$PATH:/snap/bin
 
 export EDITOR='nvim'
 
-alias bat='~/.local/bin/bat'
-# alias clip='xsel -ib'
-alias jo='/snap/bin/jo'
+alias code='$userPath/AppData/Local/Programs/Microsoft\ VS\ Code/Code.exe'
+alias powershell.exe='/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe'
+alias bat='/usr/bin/batcat'
 alias python='/usr/bin/python3'
 alias fsb='~/.local/script/fsb.sh'
 alias fshow='~/.local/script/fshow.sh'
 alias gs='git status'
 alias gd='git diff'
 alias sgh='gh repo list | awk '\''{print $1}'\'' | fzf | xargs -p gh repo clone'
+alias sgho='gh repo list aupp-dev | awk '\''{print $1}'\'' | fzf | xargs -p gh repo clone'
 alias pugh='pwd | awk -F/ '\''{print $NF}'\'' | xargs -p -I {} gh repo create --public {} --source . --push'
 alias prgh='pwd | awk -F/ '\''{print $NF}'\'' | xargs -p -I {} gh repo create --private {} --source . --push'
 alias explorer='/mnt/c/Windows/explorer.exe .'
 alias clip='/mnt/c/Windows/System32/clip.exe'
 alias pg='passgen.sh'
+alias nf='neofetch'
+alias lg='lazygit'
+alias ld='sudo ~/.local/bin/lazydocker'
+alias lz='lazysql'
 
 # Show Vi mod indicator
 function zle-line-init zle-keymap-select {
@@ -98,3 +105,12 @@ export FZF_CTRL_T_OPTS="
 
 # load neofetch
 # neofetch
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}

@@ -111,16 +111,46 @@ window_behavior:
 
 workspaces:
   - name: '1'
+    bind_to_monitor: 0
+    display_name: 'sidebar left'
   - name: '2'
+    bind_to_monitor: 0
+    display_name: 'obsidian'
   - name: '3'
+    bind_to_monitor: 1
   - name: '4'
+    bind_to_monitor: 1
+    display_name: 'main'
   - name: '5'
+    bind_to_monitor: 1
+    display_name: 'terminal'
   - name: '6'
+    bind_to_monitor: 2
+    display_name: 'communication'
   - name: '7'
+    bind_to_monitor: 2
   - name: '8'
+    bind_to_monitor: 2
   - name: '9'
+    bind_to_monitor: 2
 
 window_rules:
+  - commands: ['move --workspace 6']
+    match:
+      # Move telegram to workspace 6
+    - window_process: { equals: 'Telegram'}
+  - commands: ['move --workspace 4']
+    match:
+      # Move Brave to workspace 1
+    - window_process: { equals: 'msedge'}
+  - commands: ['move --workspace 5']
+    match:
+      # Move Brave to workspace 1
+    - window_process: { equals: 'alacritty'}
+  - commands: ['move --workspace 2']
+    match:
+      # Move Brave to workspace 1
+    - window_process: { equals: 'Obsidian'}
   - commands: ['ignore']
     match:
       # Ignores any Zebar windows.
@@ -240,21 +270,21 @@ keybindings:
   # Launch CMD terminal. Alternatively, use `shell-exec wt` or
   # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
   # Terminal and Git Bash respectively.
-  - commands: ['shell-exec wt']
+  - commands: ['shell-exec %ProgramFiles%/Alacritty/alacritty.exe']
     bindings: ['alt+enter']
 
-  - commands: ['shell-exec %ProgramFiles%/BraveSoftware/Brave-Browser/Application/brave.exe']
+  - commands: ['shell-exec msedge']
     bindings: ['alt+b']
 
   # Focus the next/previous active workspace defined in `workspaces` config.
   - commands: ['focus --next-active-workspace']
-    bindings: ['alt+s']
+    bindings: ['alt+d']
   - commands: ['focus --prev-active-workspace']
     bindings: ['alt+a']
 
   # Focus the workspace that last had focus.
   - commands: ['focus --recent-workspace']
-    bindings: ['alt+d']
+    bindings: ['alt+s']
 
   # Change focus to a workspace defined in `workspaces` config.
   - commands: ['focus --workspace 1']

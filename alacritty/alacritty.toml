@@ -1,15 +1,17 @@
+[general]
 import = [
-	"~\\AppData\\Roaming\\alacritty\\themes\\github-dark-tritanopia.toml",
+	# "~\\AppData\\Roaming\\alacritty\\themes\\github-dark-tritanopia.toml",
 		# "~\\AppData\\Roaming\\alacritty\\themes\\baitong.toml",
 	# "~\\AppData\\Roaming\\alacritty\\themes\\catppuccin-macchiato.toml",
 		# "~\\AppData\\Roaming\\alacritty\\themes\\nightfly.toml",
 	# "~\\AppData\\Roaming\\alacritty\\themes\\cyberdream.toml",
 	# "~\\AppData\\Roaming\\alacritty\\themes\\tokyo-night.toml",
+	"~\\AppData\\Roaming\\alacritty\\themes\\modus-vivendi.toml"
 ]
 
 [window]
 
-opacity = 0.95
+opacity = 0.90
 
 padding = { x = 3, y = 0 }
 dynamic_padding = true
@@ -21,16 +23,15 @@ startup_mode = "Maximized"
 
 [font]
 
-normal.family = "CaskaydiaCove Nerd Font"
+normal.family = "CaskaydiaMono Nerd Font"
 bold.family = "CaskaydiaCove Nerd Font"
-italic.family = "CaskaydiaCove Nerd Font"
+italic.family = "CaskaydiaMono Nerd Font Mono"
 bold_italic.family = "CaskaydiaCove Nerd Font"
-offset = {x = 0, y = 5}
 
 size = 12
 
-[shell]
-
+[terminal]
+[terminal.shell]
 args = ["--cd ~"]
 program = 'C:\Windows\System32\wsl.exe'
 

@@ -71,3 +71,5 @@ vim.opt.shiftwidth = 2
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
+
+vim.o.statusline = [[%f %y %r %m %=%l:%c %p%%]]
