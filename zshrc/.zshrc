@@ -33,9 +33,11 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:$(go env GOPATH)/bin"
 export PATH=$PATH:/snap/bin
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
 export EDITOR='nvim'
 
+alias odoo='/opt/odoo/venv/bin/python3.12 /opt/odoo/odoo-bin -c /etc/odoo/odoo.conf -d demo'
 alias code='$userPath/AppData/Local/Programs/Microsoft\ VS\ Code/Code.exe'
 alias powershell.exe='/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe'
 alias bat='/usr/bin/batcat'
@@ -55,6 +57,7 @@ alias nf='neofetch'
 alias lg='lazygit'
 alias ld='sudo ~/.local/bin/lazydocker'
 alias lz='lazysql'
+alias todo='~/dev/todoist_picker/todopicker'
 
 # Show Vi mod indicator
 function zle-line-init zle-keymap-select {

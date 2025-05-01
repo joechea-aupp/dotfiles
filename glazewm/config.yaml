@@ -112,37 +112,43 @@ window_behavior:
 workspaces:
   - name: '1'
     bind_to_monitor: 0
-    display_name: 'sidebar left'
+    display_name: 'sidebar left - 1'
   - name: '2'
     bind_to_monitor: 0
-    display_name: 'obsidian'
+    display_name: 'obsidian - 2'
   - name: '3'
     bind_to_monitor: 1
+    display_name: 'main - 3'
   - name: '4'
     bind_to_monitor: 1
-    display_name: 'main'
+    display_name: 'code - 4'
   - name: '5'
     bind_to_monitor: 1
-    display_name: 'terminal'
+    display_name: 'terminal - 5'
   - name: '6'
-    bind_to_monitor: 2
-    display_name: 'communication'
+    bind_to_monitor: 1
+    display_name: 'devtool - 6'
   - name: '7'
     bind_to_monitor: 2
+    display_name: 'communication - 7'
   - name: '8'
     bind_to_monitor: 2
   - name: '9'
     bind_to_monitor: 2
 
 window_rules:
-  - commands: ['move --workspace 6']
+  - commands: ['move --workspace 7']
     match:
       # Move telegram to workspace 6
     - window_process: { equals: 'Telegram'}
-  - commands: ['move --workspace 4']
+  - commands: ['move --workspace 3']
     match:
       # Move Brave to workspace 1
     - window_process: { equals: 'msedge'}
+  - commands: ['move --workspace 4']
+    match:
+      # Move Brave to workspace 1
+    - window_process: { equals: 'Code'}
   - commands: ['move --workspace 5']
     match:
       # Move Brave to workspace 1
@@ -151,6 +157,12 @@ window_rules:
     match:
       # Move Brave to workspace 1
     - window_process: { equals: 'Obsidian'}
+  - commands: ['move --workspace 1']
+    match:
+      # Move Brave to workspace 1
+    - window_process: { equals: 'Spotify'}
+    - window_process: { equals: 'Todoist'}
+    - window_process: { equals: 'ChatGPT'}
   - commands: ['ignore']
     match:
       # Ignores any Zebar windows.
@@ -270,7 +282,7 @@ keybindings:
   # Launch CMD terminal. Alternatively, use `shell-exec wt` or
   # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
   # Terminal and Git Bash respectively.
-  - commands: ['shell-exec %ProgramFiles%/Alacritty/alacritty.exe']
+  - commands: ['shell-exec %LOCALAPPDATA%/Programs/todoist/Todoist.exe']
     bindings: ['alt+enter']
 
   - commands: ['shell-exec msedge']
